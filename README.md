@@ -4,11 +4,11 @@ This demo demonstrates the use of memory pointer tricks, bitwise operations and 
 ### These are the benchmarks for a 1920x1080 32bpp buffer:
 | Method        | Color?        | Alpha?        | Safe?         | ARGB Speed    | RGB Speed     | Parallel.For? |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Byte Array    | Yes           | Yes           | Yes           | 3.54ms        | 3.35ms        | Yes           |
-| Byte Set      | Yes           | Yes           | No            | 0.85ms        | 0.65ms        | Yes           |
-| Integer Set   | Yes           | Yes           | No            | 0.44ms        | 0.44ms        | Yes           |
-| Bitwise Set   | Yes           | Yes           | No            | 0.74ms        | 0.74ms        | Yes           |
-| RtlZeroMemory | No            | No            | Yes           | 0.36ms        | 0.36ms        | No            |
+| Byte Array    | Yes           | Yes           | Yes           | 3.77ms        | 3.62ms        | Yes           |
+| Byte Set      | Yes           | Yes           | No            | 1.18ms        | 0.91ms        | Yes           |
+| Integer Set   | Yes           | Yes           | No            | 0.47ms        | 0.47ms        | Yes           |
+| Bitwise Set   | Yes           | Yes           | No            | 0.83ms        | 0.78ms        | Yes           |
+| RtlZeroMemory | No            | No            | Yes           | 0.31ms        | 0.31ms        | No            |
 | RtlZeroMemory2| No            | No            | Yes           | 0.22ms        | 0.22ms        | Yes           |
 
 <sub>Tested on i7-4710HQ 16GB DDR3 Win8.1, NET 4.5. Speeds calculated from the average of 100 tries.<br/>
