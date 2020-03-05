@@ -33,5 +33,5 @@ All tests were run in Release mode, outside of Visual Studio.
 **Bitwise Set** bit shifts ARGB/RGB byte values into each individual pixel via int* pointer.<br/>
 
 ## Conclusion
-- For Color Clear, use **Integer Set**, and calculate integers ARGB bytes from a bitwise operation.
+- For Color Clear, use **Integer Set**, and calculate the integer ARGB bytes from a bitwise operation.
 - For Black Clear, use **RtlZeroMemory** as it is the fastest method.
