@@ -23,7 +23,7 @@ All tests were run in release mode, outside of Visual Studio.
 ### Safe Methods
 **Byte Array** uses a simple 1920x1080 Parallel.For loop to set each individual pixel with a managed array.<br/>
 **RtlZeroMemory** simply zeros the entire buffer out. It is it the fastest non parallelized method.<br/>
-**RtlZeroMemory2** uses a 1080x Parallel.For loop to zero out 1920 pixel horizontally 1080 times.
+**RtlZeroMemory2** uses a 1080x Parallel.For loop to zero out 1920 pixels horizontally, 1080 times.
 
 ### Unsafe Methods
 ##### All unsafe methods use a split 1080x Parallel.For loop which then calls a lambda which then sets 1920 pixels.
