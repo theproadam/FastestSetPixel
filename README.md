@@ -31,5 +31,5 @@ memset was not included as its performance is lackluster.
 **Bitwise Set** bit shifts ARGB/RGB byte values into each individual pixel via int* pointer.<br/>
 
 ## Conclusion
-- For Color Clear, use Integer Set, and calculate said integer from a bitwise operation.
-- For Black Clear, use RtlZeroMemory as it is the fastest method.
+- For Color Clear, use **Integer Set**, and calculate said integer from a bitwise operation.
+- For Black Clear, use **RtlZeroMemory** as it is the fastest method.
