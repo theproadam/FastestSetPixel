@@ -1,6 +1,0 @@
-c:\users\adam\documents\visual studio 2013\Projects\SetPixelSpeeds\SetPixelSpeeds\bin\Debug\SetPixelSpeeds.exe.config
-c:\users\adam\documents\visual studio 2013\Projects\SetPixelSpeeds\SetPixelSpeeds\bin\Debug\SetPixelSpeeds.exe
-c:\users\adam\documents\visual studio 2013\Projects\SetPixelSpeeds\SetPixelSpeeds\bin\Debug\SetPixelSpeeds.pdb
-c:\users\adam\documents\visual studio 2013\Projects\SetPixelSpeeds\SetPixelSpeeds\obj\Debug\SetPixelSpeeds.csprojResolveAssemblyReference.cache
-c:\users\adam\documents\visual studio 2013\Projects\SetPixelSpeeds\SetPixelSpeeds\obj\Debug\SetPixelSpeeds.exe
-c:\users\adam\documents\visual studio 2013\Projects\SetPixelSpeeds\SetPixelSpeeds\obj\Debug\SetPixelSpeeds.pdb
