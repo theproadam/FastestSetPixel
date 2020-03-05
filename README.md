@@ -7,7 +7,7 @@ This demo demonstrates the use of memory pointer tricks, bitwise operations and 
 | Byte Array    | Yes           | Yes           | Yes           | 4.21ms        | 3.51ms        | Yes           |
 | Byte Set      | Yes           | Yes           | No            | 1.01ms        | 0.78ms        | Yes           |
 | Integer Set   | Yes           | Yes           | No            | 0.49ms        | 0.49ms        | Yes           |
-| Bitwise Set   | Yes           | Yes           | No            | 0.32ms        | 0.29ms        | Yes           |
+| Bitwise Set   | Yes           | Yes           | No            | 0.45ms        | 0.43ms        | Yes           |
 | RtlZeroMemory | No            | No            | Yes           | 0.38ms        | 0.38ms        | No            |
 | RtlZeroMemory2 | No           | No            | Yes           | 0.21ms        | 0.21ms        | Yes           |
 
