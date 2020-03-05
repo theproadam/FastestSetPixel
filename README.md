@@ -4,17 +4,18 @@ This demo demonstrates the use of memory pointer tricks, bitwise operations and 
 ### These are the benchmarks for a 1920x1080 32bpp buffer:
 | Method        | Color?        | Alpha?        | Safe?         | ARGB Speed    | RGB Speed     | Parallel.For? |
 | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- |
-| Byte Array    | Yes           | Yes           | Yes           | 4.21ms        | 3.51ms        | Yes           |
-| Byte Set      | Yes           | Yes           | No            | 1.01ms        | 0.78ms        | Yes           |
-| Integer Set   | Yes           | Yes           | No            | 0.49ms        | 0.49ms        | Yes           |
-| Bitwise Set   | Yes           | Yes           | No            | 0.45ms        | 0.43ms        | Yes           |
-| RtlZeroMemory | No            | No            | Yes           | 0.38ms        | 0.38ms        | No            |
-| RtlZeroMemory2| No           | No            | Yes           | 0.21ms        | 0.21ms        | Yes           |
+| Byte Array    | Yes           | Yes           | Yes           | 3.54ms        | 3.35ms        | Yes           |
+| Byte Set      | Yes           | Yes           | No            | 0.85ms        | 0.65ms        | Yes           |
+| Integer Set   | Yes           | Yes           | No            | 0.44ms        | 0.44ms        | Yes           |
+| Bitwise Set   | Yes           | Yes           | No            | 0.74ms        | 0.74ms        | Yes           |
+| RtlZeroMemory | No            | No            | Yes           | 0.36ms        | 0.36ms        | No            |
+| RtlZeroMemory2| No            | No            | Yes           | 0.22ms        | 0.22ms        | Yes           |
 
 <sub>Tested on i7-4710HQ 16GB DDR3 Win8.1, net 4.5<br/>
 Speeds calculated from the average of 100 tries.<br/>
 With the exception of **Byte Array**, all parallelized loops used lambdas for ~0.4ms time save.<br/>
-Color values and resolution values were hardcoded, so expect a slight performance impact for runtime resolved resolutions and colors.<br/>
+Resolution values were hardcoded, so expect a slight performance impact for runtime resolved resolutions<br/>
+With hardcoded color values, **Integer and Bitwise Set** can reach 0.40ms speeds<br/>
 **Integer Set** only supports ARGB colors, **RtlZeroMemory** only supports zeroing out.<br/>
 memset was not included as its performance is lackluster.<br/>
 All tests were run in Release mode, outside of Visual Studio.
@@ -32,5 +33,5 @@ All tests were run in Release mode, outside of Visual Studio.
 **Bitwise Set** bit shifts ARGB/RGB byte values into each individual pixel via int* pointer.<br/>
 
 ## Conclusion
-- For Color Clear, use **Integer Set**, and calculate said integer from a bitwise operation.
+- For Color Clear, use **Integer Set**, and calculate integers ARGB bytes from a bitwise operation.
 - For Black Clear, use **RtlZeroMemory** as it is the fastest method.
