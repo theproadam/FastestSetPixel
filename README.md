@@ -16,7 +16,8 @@ Speeds calculated from the average of 100 tries.<br/>
 With the exception of **Byte Array**, all parallelized loops used lambdas for ~0.4ms time save.<br/>
 Color values and resolution values were hardcoded, so expect a slight performance impact for runtime resolved resolutions and colors.<br/>
 **Integer Set** only supports ARGB colors, **RtlZeroMemory** only supports zeroing out.<br/>
-memset was not included as its performance is lackluster.
+memset was not included as its performance is lackluster.<br/>
+All tests were run in Release mode, outside of Visual Studio.
 </sub>
 
 ### Safe Methods
