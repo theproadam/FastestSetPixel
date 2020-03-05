@@ -11,14 +11,13 @@ This demo demonstrates the use of memory pointer tricks, bitwise operations and 
 | RtlZeroMemory | No            | No            | Yes           | 0.36ms        | 0.36ms        | No            |
 | RtlZeroMemory2| No            | No            | Yes           | 0.22ms        | 0.22ms        | Yes           |
 
-<sub>Tested on i7-4710HQ 16GB DDR3 Win8.1, net 4.5<br/>
-Speeds calculated from the average of 100 tries.<br/>
+<sub>Tested on i7-4710HQ 16GB DDR3 Win8.1, NET 4.5. Speeds calculated from the average of 100 tries.
 With the exception of **Byte Array**, all parallelized loops used lambdas for ~0.4ms time save.<br/>
-Resolution values were hardcoded, so expect a slight performance impact for runtime resolved resolutions<br/>
-With hardcoded color values, **Integer and Bitwise Set** can reach 0.40ms speeds<br/>
+Resolution values were hardcoded, so expect a slight performance impact for runtime resolved resolutions.<br/>
+With hardcoded color values, **Integer and Bitwise Set** can reach 0.40ms speeds, due to the same IL Code.<br/>
 **Integer Set** only supports ARGB colors, **RtlZeroMemory** only supports zeroing out.<br/>
 memset was not included as its performance is lackluster.<br/>
-All tests were run in Release mode, outside of Visual Studio.
+All tests were run in release mode, outside of Visual Studio.
 </sub>
 
 ### Safe Methods
