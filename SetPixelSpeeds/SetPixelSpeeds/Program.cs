@@ -138,10 +138,10 @@ namespace SetPixelSpeeds
             for (int i = 0; i < 1920; ++i)
             {
                 int a = wSD * index + 4 * i;
-                *(bptr + a) = 0;
-                *(bptr + a + 1) = 0;
-                *(bptr + a + 2) = 0;
-                *(bptr + a + 3) = 0;
+                *(bptr + a) = B;
+                *(bptr + a + 1) = G;
+                *(bptr + a + 2) = R;
+                *(bptr + a + 3) = A;
             }
         }
 
@@ -150,9 +150,9 @@ namespace SetPixelSpeeds
             for (int i = 0; i < 1920; ++i)
             {
                 int a = wSD * index + 4 * i;
-                *(bptr + a) = 0;
-                *(bptr + a + 1) = 0;
-                *(bptr + a + 2) = 0;
+                *(bptr + a) = B;
+                *(bptr + a + 1) = G;
+                *(bptr + a + 2) = R;
             }
         }
 
@@ -160,7 +160,7 @@ namespace SetPixelSpeeds
         {
             for (int i = 0; i < 1920; ++i)
             {
-                *(iptr + index * 1920 + i) = 0;
+                *(iptr + index * 1920 + i) = iValue;
             }
             //*(iptr + index * 1920 + i) = 0;
            // for (int* i = iptr + index * 1920; i < iptr + index * 1920 + 1920; ++i) *i = 0;
