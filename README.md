@@ -9,7 +9,7 @@ This demo demonstrates the use of memory pointer tricks, bitwise operations and 
 | Integer Set   | Yes           | Yes           | No            | 0.49ms        | 0.49ms        | Yes           |
 | Bitwise Set   | Yes           | Yes           | No            | 0.45ms        | 0.43ms        | Yes           |
 | RtlZeroMemory | No            | No            | Yes           | 0.38ms        | 0.38ms        | No            |
-| RtlZeroMemory2 | No           | No            | Yes           | 0.21ms        | 0.21ms        | Yes           |
+| RtlZeroMemory2| No           | No            | Yes           | 0.21ms        | 0.21ms        | Yes           |
 
 <sub>Tested on i7-4710HQ 16GB DDR3 Win8.1, net 4.5<br/>
 Speeds calculated from the average of 100 tries.<br/>
@@ -30,3 +30,6 @@ memset was not included as its performance is lackluster.
 **Integer Set** treats each pixels ARGB/RGB values as an integer, and sets them with a precalculated integer via int* pointer<br/>
 **Bitwise Set** bit shifts ARGB/RGB byte values into each individual pixel via int* pointer.<br/>
 
+## Conclusion
+- For Color Clear, use Integer Set, and calculate said integer from a bitwise operation.
+- For Black Clear, use RtlZeroMemory as it is the fastest method.
