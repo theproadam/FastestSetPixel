@@ -1,4 +1,4 @@
-# FastestSetPixel
+# Fastest SetPixel
 This demo demonstrates the use of memory pointer tricks, bitwise operations and parallelization to reach extremely high speeds of SetPixel. This demo is written in C#.
 
 ### These are the benchmarks for a 1920x1080 32bpp buffer:
